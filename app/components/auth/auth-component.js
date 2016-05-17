@@ -26,6 +26,7 @@
 		// })
 
 	function AuthController($scope, $state, FBREF) {
+		debugger
 		var ac = this;
 		var db = new Firebase(FBREF);
 
