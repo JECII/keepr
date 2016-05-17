@@ -5,27 +5,27 @@
 			templateUrl: 'app/components/auth/auth.html',
 			controller: AuthController
 		})
-		.service('MemberService', function (FBREF) {
-			var as = this;
-			var db = new Firebase(FBREF);
-			var _member = {};
+		// .service('MemberService', function (FBREF) {
+		// 	var as = this;
+		// 	var db = new Firebase(FBREF);
+		// 	var _member = {};
 
-			as.setMember = function (member) {
-				for (var propName in member) {
-					_member[propName] = member[propName]
-				}
-			}
+		// 	as.setMember = function (member) {
+		// 		for (var propName in member) {
+		// 			_member[propName] = member[propName]
+		// 		}
+		// 	}
 
-			as.getMember = function () {
-				return _member
-			}
+		// 	as.getMember = function () {
+		// 		return _member
+		// 	}
 			
-			as.getAuth = function(){
-				return db.getAuth()
-			}
-		})
+		// 	as.getAuth = function(){
+		// 		return db.getAuth()
+		// 	}
+		// })
 
-	function AuthController($scope, $state, FBREF, MemberService) {
+	function AuthController($scope, $state, FBREF) {
 		var ac = this;
 		var db = new Firebase(FBREF);
 
@@ -34,7 +34,7 @@
 		function update(snapshot) {
 			if (snapshot) {
 				ac.member = snapshot.val();
-				MemberService.setMember(ac.member);
+				// MemberService.setMember(ac.member);
 			}
 			$scope.$evalAsync(function () {
 				ac = ac;

@@ -1,5 +1,5 @@
 (function(){
-	angular.module('keepr')
+	angular.module('keepr',[])
 		.component('keepComponent', {
 			bindings:{
 				keep: '<'
@@ -8,7 +8,8 @@
 			controller: KeepController
 		})
 		
-		function KeepController(){
+		function KeepController($firebaseArray, FBREF){
+			
 			
 		}
 		

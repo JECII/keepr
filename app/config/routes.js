@@ -22,5 +22,13 @@
 					url: '/members',
 					template: '<members-component></members-component>'
 				})
+				// .state('auth.keeps', {
+				// 	url: '/keeps',
+				// 	template: '<keeps-component></keeps-component>'
+				// })
+				// .state('auth.keep', {
+				// 	url: '/keep',
+				// 	template: '<keep-component></keep-component>'
+				// })
 		})
 }())
